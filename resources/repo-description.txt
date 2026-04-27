@@ -1,0 +1,1 @@
+Apache Airflow 기여를 위한 개인 기록 저장소입니다. 비공식 저장소이며 Apache Software Foundation과 무관하고, 그 승인을 받지 않았습니다.
