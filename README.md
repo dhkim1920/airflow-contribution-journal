@@ -47,6 +47,7 @@ Airflow에 처음 PR을 보내려면 아래 순서로 가면 됩니다.
 - `notes/issues-to-explore.md`: 어떤 이슈를 고를지 판단하는 기준
 - `notes/research-log.md`: 개발 환경, 테스트, 코드 읽기 흐름 정리
 - `notes/work-log.md`: 실제 PR 올릴 때 따라갈 체크리스트
+- `notes/contributing-docs-full-summary.md`: Airflow `contributing-docs` 전체 문서의 항목별 장문 정리
 - `resources/official-links.md`: 공식 문서 바로가기
 - `ATTRIBUTION.md`: 출처/인용 원칙
 
@@ -55,6 +56,7 @@ Airflow에 처음 PR을 보내려면 아래 순서로 가면 됩니다.
 - 이슈 고르기: [notes/issues-to-explore.md](notes/issues-to-explore.md)
 - 개발 환경과 테스트: [notes/research-log.md](notes/research-log.md)
 - PR 준비와 리뷰 대응: [notes/work-log.md](notes/work-log.md)
+- 전체 문서 정리: [notes/contributing-docs-full-summary.md](notes/contributing-docs-full-summary.md)
 - 공식 링크: [resources/official-links.md](resources/official-links.md)
 
 ## 아주 짧은 실행 예시

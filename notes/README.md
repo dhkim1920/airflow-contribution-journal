@@ -5,5 +5,6 @@
 - `issues-to-explore.md`: 어떤 이슈를 집을지 판단하는 기준
 - `research-log.md`: 환경 세팅, 코드 탐색, 테스트 관점 정리
 - `work-log.md`: PR 올리기 전후 체크리스트
+- `contributing-docs-full-summary.md`: Airflow `contributing-docs` 전체를 항목별로 다시 묶은 장문 정리
 
 모든 문서는 공식 문서를 그대로 복사하지 않고, 실제로 행동에 옮기기 쉬운 형태로 요약하는 것을 원칙으로 합니다.
