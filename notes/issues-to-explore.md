@@ -2,6 +2,34 @@
 
 Airflow는 이슈를 먼저 assign 받아야만 작업할 수 있는 프로젝트가 아닙니다. 공식 가이드 기준으로는 **이슈를 assign 받지 않아도 바로 PR을 열 수 있고**, 여러 사람이 같은 문제를 병렬로 풀 수도 있습니다. 그래서 중요한 건 “찜”이 아니라 **내가 끝까지 가져갈 수 있는 범위인지**입니다.
 
+## 이번에 실제로 고른 이슈
+
+- 이슈: [apache/airflow#40210](https://github.com/apache/airflow/issues/40210) - `cncf.kubernetes` operators/executors에 필요한 access privilege 문서화
+- 분류: docs
+- 라벨: `good first issue`, `kind:documentation`
+- 선택일: 2026-06-08
+
+이 이슈를 첫 실전 후보로 고른 이유는 범위가 문서 중심이고, Airflow maintainer가 이미 `good first issue`로 표시했으며, 구현 방향 힌트도 남아 있기 때문입니다. 특히 Helm chart의 RBAC 템플릿을 참고해 KubernetesExecutor와 KubernetesPodOperator 사용자가 필요한 권한을 이해할 수 있게 정리하는 문제라, 코드 변경보다 리뷰/문서 품질 기준을 익히기에 좋습니다.
+
+먼저 볼 링크와 파일:
+
+- 이슈 본문과 코멘트: <https://github.com/apache/airflow/issues/40210>
+- 이전 PR: <https://github.com/apache/airflow/pull/53540>
+- 참고 후보 파일: `chart/templates/rbac/pod-launcher-role.yaml`
+- 참고 후보 위치: `providers/cncf/kubernetes/docs/`
+
+주의할 점은 이전 PR [#53540](https://github.com/apache/airflow/pull/53540)이 있었지만 merge되지 않고 stale로 닫혔다는 점입니다. 방향 자체가 거절된 흔적은 없고, 코멘트상 docs/static check 실패가 남아 있던 흐름이라, 이전 PR을 그대로 베끼기보다 현재 main 기준 문서 구조와 static check를 맞춰 작게 다시 제안하는 쪽이 좋아 보입니다.
+
+이번에 보류한 후보:
+
+- [#68177](https://github.com/apache/airflow/issues/68177), [#68178](https://github.com/apache/airflow/issues/68178), [#68174](https://github.com/apache/airflow/issues/68174): 이미 닫는 PR이 열려 있어 첫 이슈로 부적합
+- [#52516](https://github.com/apache/airflow/issues/52516): UI 설계 논의가 먼저 필요한 기능 이슈
+- [#53410](https://github.com/apache/airflow/issues/53410): 최근 작업 의사를 밝힌 사람이 있고, 민감정보/UI 영향이 있어 초반 후보로는 리스크가 큼
+- [#56060](https://github.com/apache/airflow/issues/56060): `Can't Reproduce`, `stale`, `pending-response` 상태라 재현부터 불확실함
+- [#46293](https://github.com/apache/airflow/issues/46293): KubernetesExecutor/Task SDK 변화와 얽혀 범위가 커질 가능성이 큼
+
+다음 액션은 Airflow 본 repository에서 현재 문서 구조를 확인하고, #53540의 접근을 참고하되 더 작은 문서 PR로 다시 작성하는 것입니다.
+
 ## 처음 기여할 때 추천하는 이슈
 
 ### 1. 문서 수정
